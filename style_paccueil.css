@@ -1,0 +1,322 @@
+.logo {
+    position :relative;
+    float: right !important;
+    justify-content: center;
+    margin-right: 0px;
+    display : flex;
+    height: 60px; 
+    padding-top: 0%;
+}
+
+li {
+  display: inline-block;
+  margin: 5px;
+}
+ul {
+  padding-left: 0%;
+}
+
+button {
+   padding: 0;
+   margin: 0;
+   border: none;
+   background: none;
+ }
+  
+button {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+}  
+button a {
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--primary-color)
+}
+ 
+button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+  
+button a::before {
+  position: absolute;
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out; 
+} 
+
+#accueil::before {
+  content: "Accueil";
+}
+#oeuvres::before {
+  content: "Oeuvres";
+} 
+
+#auteurs::before {
+  content: "Auteurs";
+}
+#apropos::before {
+  content: "About";
+}
+button:hover::after {
+  width: 100%;
+}
+  
+button:hover a::before {
+  width: 100%;
+}
+  
+button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color)
+}
+  
+button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+.header {
+  position:fixed;
+  overflow: hidden;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("./images_paccueil/background_image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header::before {
+  content : "";
+  position : absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: auto 1fr auto;
+}
+
+.presentationtexte {
+  position: relative;
+  display: flex;
+  background-color: rgba(95, 158, 160, 0.538) ;
+  border-radius: 2%;
+  box-sizing: content-box;
+  margin-left: 3%;
+  margin-top: 45vh;
+  margin-right: 3%;
+}
+.titreprez {
+  position: absolute;
+  padding-left: 2%;
+  box-sizing: content-box;
+  text-align: center;
+}
+.prez1 {
+  width: 50%;
+  padding-top: 15%;
+  padding-left: 5%;
+}
+.prez2 {
+  width: 50%;
+}
+.Auteurs {
+  display: flex;
+  position: relative;
+  margin-top: 15vh;
+  background-color: rgba(95, 158, 160, 0.538) ;
+  border-radius: 2%;
+  box-sizing: content-box;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.aut_1 {
+  width: 25%;
+  padding-top: 8%;
+}
+.aut_2 {
+  width: 25%;
+  padding-top: 8%;
+}
+.aut_3 {
+  width: 25%;
+  padding-top: 8%;
+}
+.aut_4 {
+  width : 25% ;
+  padding-top: 8%;
+
+}
+.Oeuvres {
+  display: flex;
+  position: relative;
+  margin-top: 15vh;
+  background-color: rgba(95, 158, 160, 0.538) ;
+  border-radius: 2%;
+  box-sizing: content-box;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+}
+#fleche {
+  margin-left: auto;
+  margin-right : 2% ;
+  margin-top: 23%;
+  margin-bottom: 18%;
+  text-decoration: none;
+  cursor: pointer;
+}
+#fleche2 {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+#prezoeuvre {
+  width: 17vw;
+  height: 56vh;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  border-radius: 2%;
+}
+.titreprez {
+  padding-left: 5%;
+  text-align: center;
+}
+.suite {
+  justify-content: right;
+}
+h2 {
+  padding-left: 5%;
+}
+.oeu_1 {
+  width: 25%;
+  padding-top: 8%;
+}
+.oeu_2 {
+  width: 25%;
+  padding-top: 8%;
+}
+.oeu_3 {
+  width: 25%;
+  padding-top: 8%;
+}
+.oeu_4 {
+  width : 25% ;
+  padding-top: 8%;
+
+}
+footer {
+  position: relative;
+}
+.footer-distributed {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: white;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+.footer-distributed .footer-right a:hover{
+  transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+}
+.footer-distributed p.footer-links a:hover {
+  text-decoration:underline;
+}
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
